@@ -1,0 +1,13 @@
+version: '3'
+services:
+  rails:
+    build: .
+    ports:
+      - 127.0.0.1:3000:3000
+    command: bundle
+    volumes:
+      - .:/app:cached
+    env_file:
+      - .env
+    tty: true
+    stdin_open: true
